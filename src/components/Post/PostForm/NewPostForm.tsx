@@ -24,11 +24,12 @@ import { IoDocumentText, IoImageOutline } from "react-icons/io5";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { useRecoilState, useSetRecoilState } from "recoil";
 import { firestore, storage } from "../../../firebase/clientApp";
-import TabItem from "./TabItem";
+
 import { postState } from "../../../atoms/postsAtom";
 import { getDownloadURL, ref, uploadString } from "firebase/storage";
 import TextInputs from "./TextInputs";
 import ImageUpload from "./ImageUpload";
+import TabItem from "./TabItem";
 
 const formTabs = [
   {
@@ -86,12 +87,12 @@ const NewPostForm: React.FC<NewPostFormProps> = ({
     const { title, body } = textInputs;
     try {
       const postDocRef = await addDoc(collection(firestore, "posts"), {
-        communityId,
+        communityId: communityId as string,
         communityImageURL: communityImageURL || "",
         creatorId: user.uid,
         userDisplayText: user.email!.split("@")[0],
-        title,
-        body,
+        title: textInputs.title,
+        body: textInputs.body,
         numberOfComments: 0,
         voteStatus: 0,
         createdAt: serverTimestamp(),
