@@ -10,7 +10,7 @@ import {
 } from "react-icons/io5";
 import useDirectory from "../../../hooks/useDirectory";
 import Link from "next/link";
-
+import { useColorMode } from '@chakra-ui/color-mode'
 type ActionIconsProps = {};
 
 const ActionIcons: React.FC<ActionIconsProps> = () => {
@@ -38,21 +38,6 @@ const ActionIcons: React.FC<ActionIconsProps> = () => {
       </Box>
       <>
         <Flex
-          mr={1.5}
-          ml={1.5}
-          padding={1}
-          cursor="pointer"
-          borderRadius={4}
-          _hover={{ bg: "gray.200" }}
-        >
-          <Link href="https://vasukam-web.vercel.app/">
-                  <Button  height="30px">
-                    Vasukam Website
-                  </Button>
-                </Link>
-        </Flex>
-        
-        <Flex
           display={{ base: "none", md: "flex" }}
           mr={3}
           ml={1.5}
@@ -65,6 +50,7 @@ const ActionIcons: React.FC<ActionIconsProps> = () => {
           <Icon as={GrAdd} fontSize={20} />
         </Flex>
       </>
+     
     </Flex>
   );
 };
