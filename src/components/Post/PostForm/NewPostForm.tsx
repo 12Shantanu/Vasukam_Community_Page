@@ -29,7 +29,7 @@ import { postState } from "../../../atoms/postsAtom";
 import { getDownloadURL, ref, uploadString } from "firebase/storage";
 import TextInputs from "./TextInputs";
 import ImageUpload from "./ImageUpload";
-import TabItem from "./TabItem";
+import TabItemm from "./TabItem";
 
 const formTabs = [
   {
@@ -151,7 +151,7 @@ const NewPostForm: React.FC<NewPostFormProps> = ({
     <Flex direction="column" bg="white" borderRadius={4} mt={2}>
       <Flex width="100%">
         {formTabs.map((item, index) => (
-          <TabItem
+          <TabItemm
             key={index}
             item={item}
             selected={item.title === selectedTab}
