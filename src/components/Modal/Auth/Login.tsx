@@ -17,7 +17,7 @@ const Login: React.FC<LoginProps> = ({ toggleView }) => {
   });
   const [formError, setFormError] = useState("");
 
-  const [signInWithEmailAndPassword, _, loading, authError] =
+  const [signInWithEmailAndPassword, user, loading, authError] =
     useSignInWithEmailAndPassword(auth);
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
