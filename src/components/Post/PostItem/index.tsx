@@ -82,6 +82,7 @@ const PostItem: React.FC<PostItemContentProps> = ({
   };
 
   return (
+    <>
     <Flex
       border="1px solid"
       bg="white"
@@ -229,6 +230,7 @@ const PostItem: React.FC<PostItemContentProps> = ({
         </Flex>
       </Flex>
     </Flex>
+    </>
   );
 };
 

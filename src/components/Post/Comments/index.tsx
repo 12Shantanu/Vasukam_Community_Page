@@ -32,6 +32,8 @@ type CommentsProps = {
   community: string;
 };
 
+
+
 const Comments: React.FC<CommentsProps> = ({
   user,
   selectedPost,
@@ -39,7 +41,7 @@ const Comments: React.FC<CommentsProps> = ({
 }) => {
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState<Comment[]>([]);
-  const [commentFetchLoading, setCommentFetchLoading] = useState(false);
+  const [commentFetchLoading, setCommentFetchLoading] = useState(true);
   const [commentCreateLoading, setCommentCreateLoading] = useState(false);
   const [deleteLoading, setDeleteLoading] = useState("");
   const setAuthModalState = useSetRecoilState(authModalState);
