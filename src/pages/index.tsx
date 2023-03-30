@@ -67,6 +67,7 @@ const Home: NextPage = () => {
               query(
                 collection(firestore, "posts"),
                 where("communityId", "==", myCommunityIds[index]),
+                orderBy("createdAt", "desc"),
                 limit(20)
               )
             )
@@ -91,7 +92,7 @@ const Home: NextPage = () => {
 
         const postQuery = query(
           collection(firestore, "posts"),
-          orderBy("voteStatus", "desc"),
+          orderBy("createdAt", "desc"),
           limit(20)
         );
         const postDocs = await getDocs(postQuery);
@@ -180,8 +181,8 @@ const Home: NextPage = () => {
   useEffect(() => {
     if (!user && !loadingUser) {
       getNoUserHomePosts();
-    }
-  }, [user, loadingUser]);
+    }                                 
+  }, [user, loadingUser]);                      
 
   useEffect(() => {
     if (!user?.uid || !postStateValue.posts.length) return;
