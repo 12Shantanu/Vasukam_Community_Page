@@ -2,6 +2,7 @@ import React from "react";
 import { Flex, Icon, Text, Stack, Button } from "@chakra-ui/react";
 import { GiCheckedShield } from "react-icons/gi";
 
+
 const Premium: React.FC = () => {
   return (
     <Flex
@@ -23,6 +24,7 @@ const Premium: React.FC = () => {
       <Button height="30px" bg="brand.100">
         Try Now
       </Button>
+      
     </Flex>
   );
 };

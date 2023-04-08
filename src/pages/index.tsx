@@ -1,5 +1,7 @@
 import { useEffect } from "react";
-import { Stack } from "@chakra-ui/react";
+import { Flex, Icon, Text, Stack, Button } from "@chakra-ui/react";
+import Link from "next/link";
+
 import {
   collection,
   DocumentData,
@@ -26,6 +28,7 @@ import { auth, firestore } from "../firebase/clientApp";
 import usePosts from "../hooks/usePosts";
 import Premium from "../components/Community/Premium";
 import PersonalHome from "../components/Community/PersonalHome";
+import Stable from "./Stable";
 
 const Home: NextPage = () => {
   const [user, loadingUser] = useAuthState(auth);
@@ -227,6 +230,28 @@ const Home: NextPage = () => {
       </>
       <Stack spacing={5} position="sticky" top="14px">
         <Recommendations />
+//stable
+<Flex
+      direction="column"
+      bg="white"
+      borderRadius={4}
+      cursor="pointer"
+      p="12px"
+      border="1px solid"
+      borderColor="gray.300"
+    >
+      <Flex mb={2}>
+        <Stack  spacing={1} fontSize="12pt" pl={2}>
+          <Text color="tomato"  fontWeight={900}>Vasukam AI Image Generator</Text>
+          <Text>The best Vasukam experience, with Our AI </Text>
+        </Stack>
+      </Flex>
+      <Link href="/Stable">
+      <Button height="30px" bg="brand.100">
+        Try Now
+      </Button>
+      </Link>
+    </Flex>
         <Premium />
         <PersonalHome />
       </Stack>
