@@ -46,7 +46,8 @@ function Stable() {
         <Heading>AI Image Generator🚀</Heading>
         <Text marginBottom={"10px"}>
           
-         Let's Try Something Interesting :: TYPE YOUR NAME AND SEE THE MAGIC
+         Let&apos;s  Try Something Interesting :: 
+         TYPE YOUR NAME AND SEE THE MAGIC
            
           
         </Text>
