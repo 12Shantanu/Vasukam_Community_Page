@@ -41,7 +41,7 @@ function Stable() {
 
   return (
 <>
-<ChakraProvider>
+<ChakraProvider >
       <Container>
         <Heading>AI Image Generator🚀</Heading>
         <Text marginBottom={"10px"}>
