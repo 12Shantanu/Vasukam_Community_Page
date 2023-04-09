@@ -40,10 +40,12 @@ function Stable() {
   };
 
   return (
-<>
+
 <ChakraProvider >
+
       <Container>
-        <Heading>AI Image Generator🚀</Heading>
+      
+        <h1 >AI Image Generator🚀</h1>
         <Text marginBottom={"10px"}>
           
          Let&apos;s  Try Something Interesting :: 
@@ -76,11 +78,13 @@ function Stable() {
           
           <Image src={imageUrl} alt="Generated image"  boxShadow="lg" />
       )}
+      
       </Container>
     </ChakraProvider>
-</>
+
    
   );
 }
 
 export default Stable;
+

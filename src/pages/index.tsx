@@ -208,28 +208,7 @@ const Home: NextPage = () => {
           <PostLoader />
         ) : (
           <Stack>
-            {postStateValue.posts.map((post: Post, index) => (
-              <PostItem
-                key={post.id}
-                post={post}
-                postIdx={index}
-                onVote={onVote}
-                onDeletePost={onDeletePost}
-                userVoteValue={
-                  postStateValue.postVotes.find(
-                    (item) => item.postId === post.id
-                  )?.voteValue
-                }
-                userIsCreator={user?.uid === post.creatorId}
-                onSelectPost={onSelectPost}
-                homePage
-              />
-            ))}
-          </Stack>
-        )}
-      </>
-      <Stack spacing={5} position="sticky" top="14px">
-        <Recommendations />
+
 //stable
 <Flex
       direction="column"
@@ -252,6 +231,32 @@ const Home: NextPage = () => {
       </Button>
       </Link>
     </Flex>
+
+            {postStateValue.posts.map((post: Post, index) => (
+              <PostItem
+                key={post.id}
+                post={post}
+                postIdx={index}
+                onVote={onVote}
+                onDeletePost={onDeletePost}
+                userVoteValue={
+                  postStateValue.postVotes.find(
+                    (item) => item.postId === post.id
+                  )?.voteValue
+                }
+                userIsCreator={user?.uid === post.creatorId}
+                onSelectPost={onSelectPost}
+                homePage
+                
+              />
+            ))}
+            
+          </Stack>
+        )}
+      </>
+      <Stack spacing={5} position="sticky" top="14px">
+        <Recommendations />
+
         <Premium />
         <PersonalHome />
       </Stack>
