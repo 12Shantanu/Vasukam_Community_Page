@@ -1,6 +1,6 @@
 import Replicate from 'replicate';
 import React from "react";
-const handler = async (req: { method: string; body: { value: any; }; }, res: { status: (arg0: number) => { (): any; new(): any; json: { (arg0: object): void; new(): any; }; }; }) => {
+const handler = async (req, res) => {
   if (req.method !== 'POST') {
     res.status(405).json({ message: 'Method not allowed' });
     return;
