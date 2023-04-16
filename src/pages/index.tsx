@@ -209,8 +209,7 @@ const Home: NextPage = () => {
         ) : (
           <Stack>
 
-//stable
-<Flex
+    <Flex
       direction="column"
       bg="white"
       borderRadius={4}
@@ -225,7 +224,7 @@ const Home: NextPage = () => {
           <Text>The best Vasukam experience, with Our AI </Text>
         </Stack>
       </Flex>
-      <Link href="/Stable">
+      <Link href="/AI">
       <Button height="30px" bg="brand.100">
         Try Now
       </Button>
