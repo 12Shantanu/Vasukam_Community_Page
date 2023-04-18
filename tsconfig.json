@@ -27,6 +27,6 @@
     "components/Profile.jsx",
     "pages/profile.js",
     "pages/index.jsx"
-  ],
+, "src/pages/AI.js"  ],
   "exclude": ["node_modules"]
 }

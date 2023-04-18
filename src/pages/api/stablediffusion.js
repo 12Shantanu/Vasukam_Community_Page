@@ -21,11 +21,12 @@ const handler = async (req, res) => {
       {
         input: {
           prompt: value,
-          image_dimensions: "512x512",
-          num_inference_steps: 12,
+          image_dimensions: "768x768",
+          num_inference_steps: 500,
           num_outputs: 1,
-          guideance_scale: 3.5,
-          scheduler: "K_EULER" ,
+          guideance_scale: 20,
+          scheduler: "PNDM" 
+      
         },
       },
     );

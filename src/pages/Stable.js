@@ -32,11 +32,11 @@ function Stable() {
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-green-500 to-cyan-400 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
         <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
           <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4">
-            <input
+            <textarea
               type="text"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
-              className="w-full px-5 py-3 text-gray-700 bg-gray-200 rounded"
+              className="w-full px-5 py-3 border-2 text-gray-700 bg-gray-200 rounded"
               placeholder="Enter a prompt..."
             />
             <button type="submit" className="w-full px-3 py-4 text-white bg-gradient-to-r from-cyan-400 via-green-500 to-cyan-400 rounded-md focus:outline-none" disabled={loading}>
